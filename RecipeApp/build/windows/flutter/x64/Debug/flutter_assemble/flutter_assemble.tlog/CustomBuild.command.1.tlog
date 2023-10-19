@@ -1,0 +1,28 @@
+^C:\USERS\JUNOK\ONEDRIVE\DESKTOP\GROUP22-FA23\RECIPEAPP\BUILD\WINDOWS\CMAKEFILES\1D73093F3FA14949C73A668037124257\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\junok\Flutter\flutter_windows_3.13.4-stable\flutter PROJECT_DIR=C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp FLUTTER_ROOT=C:\Users\junok\Flutter\flutter_windows_3.13.4-stable\flutter FLUTTER_EPHEMERAL_DIR=C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\windows\flutter\ephemeral PROJECT_DIR=C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp FLUTTER_TARGET=C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\lib\main.dart DART_DEFINES=RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9hNzk0Y2YyNjgxYzZjOWZlN2IyNjBlMGU4NGRlOTYyOThkYzljMThiLw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\.dart_tool\package_config.json C:/Users/junok/Flutter/flutter_windows_3.13.4-stable/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JUNOK\ONEDRIVE\DESKTOP\GROUP22-FA23\RECIPEAPP\BUILD\WINDOWS\CMAKEFILES\B7BA0A7FA05A88548D7BD1D541712C08\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\JUNOK\ONEDRIVE\DESKTOP\GROUP22-FA23\RECIPEAPP\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/junok/OneDrive/Desktop/Group22-FA23/RecipeApp/windows -BC:/Users/junok/OneDrive/Desktop/Group22-FA23/RecipeApp/build/windows --check-stamp-file C:/Users/junok/OneDrive/Desktop/Group22-FA23/RecipeApp/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

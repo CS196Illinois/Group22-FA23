@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\windows\CMakeFiles\b7ba0a7fa05a88548d7bd1d541712c08\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FFF50AC9-E255-3F1E-BFF8-0AAD06BBD039}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

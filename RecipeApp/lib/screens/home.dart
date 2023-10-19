@@ -53,9 +53,9 @@ const Bookmark()
                 icon: SvgPicture.asset("assets/icons/home.svg",
                     height: 25, width: 25)),
             BottomNavigationBarItem(
-              label: "Bookmark",
-                icon: SvgPicture.asset("assets/icons/bookmark.svg",
-                    height: 25, width: 25)),
+              label: "My Fridge",
+                icon: Icon(Icons.kitchen),
+                    ),
           ]),
     );
   }

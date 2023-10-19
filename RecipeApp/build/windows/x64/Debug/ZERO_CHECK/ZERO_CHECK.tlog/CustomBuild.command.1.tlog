@@ -1,0 +1,10 @@
+^C:\USERS\JUNOK\ONEDRIVE\DESKTOP\GROUP22-FA23\RECIPEAPP\BUILD\WINDOWS\CMAKEFILES\B2B40D4A6C39EA9F19F296B2BBFBF544\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/junok/OneDrive/Desktop/Group22-FA23/RecipeApp/windows -BC:/Users/junok/OneDrive/Desktop/Group22-FA23/RecipeApp/build/windows --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/junok/OneDrive/Desktop/Group22-FA23/RecipeApp/build/windows/foodrecipe.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
