@@ -16,7 +16,7 @@ class IngredientTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
       //allows tile to be slidable, allows for delete button to remove ingredient from the list
       child: Slidable(
         endActionPane: ActionPane(
@@ -30,8 +30,11 @@ class IngredientTile extends StatelessWidget {
             ),
           ],
         ),
+
         child: Container(
-          padding: const EdgeInsets.all(50),
+          padding: const EdgeInsets.all(40),
+          alignment: Alignment.center,
+  
           child: Text(
             ingredientName,
             style: TextStyle(

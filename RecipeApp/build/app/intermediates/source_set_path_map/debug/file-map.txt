@@ -1,0 +1,12 @@
+com.example.foodrecipe.app-jetified-window-java-1.0.0-beta04-0 C:\Users\junok\.gradle\caches\transforms-3\4d7a90eb7b858d3a543a3d16b4fc84e7\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.foodrecipe.app-core-1.6.0-1 C:\Users\junok\.gradle\caches\transforms-3\5b6a47406f3c5ee736c56cef8350e60f\transformed\core-1.6.0\res
+com.example.foodrecipe.app-jetified-annotation-experimental-1.1.0-2 C:\Users\junok\.gradle\caches\transforms-3\6bc9288b841ebc4671cf947c6fd00e3f\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.foodrecipe.app-jetified-window-1.0.0-beta04-3 C:\Users\junok\.gradle\caches\transforms-3\b3b72fdb4155540aeef8480c2d605883\transformed\jetified-window-1.0.0-beta04\res
+com.example.foodrecipe.app-debug-4 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\android\app\src\debug\res
+com.example.foodrecipe.app-main-5 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\android\app\src\main\res
+com.example.foodrecipe.app-pngs-6 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\generated\res\pngs\debug
+com.example.foodrecipe.app-resValues-7 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\generated\res\resValues\debug
+com.example.foodrecipe.app-rs-8 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\generated\res\rs\debug
+com.example.foodrecipe.app-mergeDebugResources-9 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.foodrecipe.app-mergeDebugResources-10 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.foodrecipe.app-merged_res-11 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\intermediates\merged_res\debug

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\junok\\OneDrive\\Desktop\\Group22-FA23\\RecipeApp\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "com.example.foodrecipe.app-mergeDebugResources-9:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\junok\\.gradle\\caches\\transforms-3\\fa3e23051d51d4a17ebf5018e7cbf8a1\\transformed\\core-1.6.0\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\junok\\.gradle\\caches\\transforms-3\\5b6a47406f3c5ee736c56cef8350e60f\\transformed\\core-1.6.0\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
