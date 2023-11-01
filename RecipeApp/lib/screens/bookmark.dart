@@ -1,7 +1,10 @@
+//Note: commented out unused imports
 import 'package:flutter/material.dart';
 //import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodrecipe/color.dart';
-import 'package:foodrecipe/utiles/bookmarkcart.dart';
+//import 'package:foodrecipe/utiles/bookmarkcart.dart';
+import 'package:foodrecipe/utiles/dialogbox.dart';
+import 'package:foodrecipe/utiles/ingredienttile.dart';
 
 class Bookmark extends StatefulWidget {
   const Bookmark({Key? key}) : super(key: key);
@@ -11,20 +14,80 @@ class Bookmark extends StatefulWidget {
 }
 
 class _BookmarkState extends State<Bookmark> {
+  final _controller = TextEditingController();
+
+  //When called, opens dialog box that gives user ability to input ingredient
+  //When the "Save" button is pressed (onSave), runs saveIngredient function
+  //When the "Cancel" button is pressed (onCancel), closes the dialog window
+  void addNewIngredient() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return DialogBox(
+          controller: _controller,
+          onSave: saveIngredient,
+          onCancel: () => Navigator.of(context).pop(),
+        );
+      },
+    );
+  }
+
+  //removes ingredient from ingredientList
+  void deleteIngredient(int index) {
+    setState(() {
+      ingredientList.removeAt(index);
+    });
+  }
+
+  //saves ingredient to ingredientList
+  //closes dialog box
+  void saveIngredient() {
+    setState(() {
+      ingredientList.add(_controller.text);
+    });
+    Navigator.of(context).pop();
+  }
+
+  //initial list of ingredients, will change later
+  List ingredientList = ["Apple", "Orange", "Sugar"];
+
   @override
   Widget build(BuildContext context) {
+    //TabController has 2 tabs disabled because they are not implemented yet/may not be able to implement w/ time constraint
     return DefaultTabController(
-      length: 2,
+      length: 1,
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: primary,
             bottom: TabBar(tabs: [
-              Tab(child: Text("Saved")),
-              Tab(child: Text("Eaten")),
+              Tab(child: Text("Ingredients Available")),
+              //Tab(child: Text("Saved")),
+              //Tab(child: Text("Eaten")),
             ]),
             title: Text("My Fridge"),
           ),
           body: TabBarView(children: [
+            //Ingredients Page
+            Scaffold(
+              //add button, calls addNewIngredient function above
+              floatingActionButton: FloatingActionButton(
+                backgroundColor: primary,
+                onPressed: addNewIngredient,
+                child: Icon(Icons.add),
+              ),
+              //creates a scrollable list of tiles with ingredients in ingredientList
+              body: ListView.builder(
+                itemCount: ingredientList.length,
+                itemBuilder: (context, index) {
+                  return IngredientTile(
+                    ingredientName: ingredientList[index],
+                    deleteFunction: (p0) => deleteIngredient(index),
+                  );
+                },
+              ),
+            ),
+
+            /*
             SafeArea(
               child: SingleChildScrollView(
                 child: Column(
@@ -135,6 +198,7 @@ class _BookmarkState extends State<Bookmark> {
                 ),
               ),
             ),
+            */
           ])),
     );
   }
