@@ -39,6 +39,7 @@ class IngredientTile extends StatelessWidget {
             ingredientName,
             style: TextStyle(
               color: Colors.white,
+              fontSize: 20,
             ),
           ),
           decoration: BoxDecoration(

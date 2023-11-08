@@ -1,10 +1,9 @@
-//Note: commented out unused imports
 import 'package:flutter/material.dart';
-//import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodrecipe/color.dart';
-//import 'package:foodrecipe/utiles/bookmarkcart.dart';
+import 'package:foodrecipe/utiles/databaseForIngredients.dart';
 import 'package:foodrecipe/utiles/dialogbox.dart';
 import 'package:foodrecipe/utiles/ingredienttile.dart';
+import 'package:hive/hive.dart';
 
 class Bookmark extends StatefulWidget {
   const Bookmark({Key? key}) : super(key: key);
@@ -16,6 +15,24 @@ class Bookmark extends StatefulWidget {
 class _BookmarkState extends State<Bookmark> {
   final _controller = TextEditingController();
 
+  // reference Hive box
+  final _box = Hive.box('ingredientBox');
+  IngredientDataBase database = IngredientDataBase();
+
+  @override
+  void initState() {
+
+    //if this is 1st time opening app, then create default data
+    if (_box.get("INGREDIENTLIST") == null) {
+      database.createInitialData();
+    } else {
+      //app has been opened before
+      database.loadData();
+    }
+
+    super.initState();
+  }
+
   //When called, opens dialog box that gives user ability to input ingredient
   //When the "Save" button is pressed (onSave), runs saveIngredient function
   //When the "Cancel" button is pressed (onCancel), closes the dialog window
@@ -26,30 +43,45 @@ class _BookmarkState extends State<Bookmark> {
         return DialogBox(
           controller: _controller,
           onSave: saveIngredient,
-          onCancel: () => Navigator.of(context).pop(),
+          onCancel: onCancel,
         );
       },
     );
   }
 
+  //on cancel button press, closes dialog box and resets text controller
+  void onCancel() {
+    setState(() {
+      Navigator.of(context).pop();
+    });
+    _controller.text = "";
+  }
+
   //removes ingredient from ingredientList
   void deleteIngredient(int index) {
     setState(() {
-      ingredientList.removeAt(index);
+      database.ingredientList.removeAt(index);
+      if (database.ingredientList.isEmpty) {
+        database.ingredientList.add("Add An Ingredient!");
+      }
     });
+    database.updateDataBase();
   }
 
   //saves ingredient to ingredientList
   //closes dialog box
+  //_controller.text is reset so the text input box is empty
   void saveIngredient() {
     setState(() {
-      ingredientList.add(_controller.text);
+      database.ingredientList.add(_controller.text);
+      _controller.text = "";
+      if (database.ingredientList[0] == "Add An Ingredient!") {
+        deleteIngredient(0);
+      }
     });
     Navigator.of(context).pop();
+    database.updateDataBase();
   }
-
-  //initial list of ingredients, will change later
-  List ingredientList = ["Apple", "Orange", "Sugar"];
 
   @override
   Widget build(BuildContext context) {
@@ -77,10 +109,10 @@ class _BookmarkState extends State<Bookmark> {
               ),
               //creates a scrollable list of tiles with ingredients in ingredientList
               body: ListView.builder(
-                itemCount: ingredientList.length,
+                itemCount: database.ingredientList.length,
                 itemBuilder: (context, index) {
                   return IngredientTile(
-                    ingredientName: ingredientList[index],
+                    ingredientName: database.ingredientList[index],
                     deleteFunction: (p0) => deleteIngredient(index),
                   );
                 },

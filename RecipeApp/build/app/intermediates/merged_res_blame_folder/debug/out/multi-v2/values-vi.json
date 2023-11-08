@@ -4,7 +4,7 @@
             "outputFile": "com.example.foodrecipe.app-mergeDebugResources-9:/values-vi/values-vi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\junok\\.gradle\\caches\\transforms-3\\5b6a47406f3c5ee736c56cef8350e60f\\transformed\\core-1.6.0\\res\\values-vi\\values-vi.xml",
+                    "source": "C:\\Users\\junok\\.gradle\\caches\\transforms-3\\ec3db4ed978ec5d3d6d0101357f8e139\\transformed\\core-1.6.0\\res\\values-vi\\values-vi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

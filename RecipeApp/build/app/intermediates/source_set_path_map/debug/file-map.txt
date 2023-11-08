@@ -1,7 +1,7 @@
-com.example.foodrecipe.app-jetified-window-java-1.0.0-beta04-0 C:\Users\junok\.gradle\caches\transforms-3\4d7a90eb7b858d3a543a3d16b4fc84e7\transformed\jetified-window-java-1.0.0-beta04\res
-com.example.foodrecipe.app-core-1.6.0-1 C:\Users\junok\.gradle\caches\transforms-3\5b6a47406f3c5ee736c56cef8350e60f\transformed\core-1.6.0\res
-com.example.foodrecipe.app-jetified-annotation-experimental-1.1.0-2 C:\Users\junok\.gradle\caches\transforms-3\6bc9288b841ebc4671cf947c6fd00e3f\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.foodrecipe.app-jetified-window-1.0.0-beta04-3 C:\Users\junok\.gradle\caches\transforms-3\b3b72fdb4155540aeef8480c2d605883\transformed\jetified-window-1.0.0-beta04\res
+com.example.foodrecipe.app-jetified-window-java-1.0.0-beta04-0 C:\Users\junok\.gradle\caches\transforms-3\587cf50f9ff791d6fddd44b5f8bfc52f\transformed\jetified-window-java-1.0.0-beta04\res
+com.example.foodrecipe.app-jetified-annotation-experimental-1.1.0-1 C:\Users\junok\.gradle\caches\transforms-3\5e641c78fb8d35bf197a55fa4c9134aa\transformed\jetified-annotation-experimental-1.1.0\res
+com.example.foodrecipe.app-core-1.6.0-2 C:\Users\junok\.gradle\caches\transforms-3\ec3db4ed978ec5d3d6d0101357f8e139\transformed\core-1.6.0\res
+com.example.foodrecipe.app-jetified-window-1.0.0-beta04-3 C:\Users\junok\.gradle\caches\transforms-3\f375ae29d4a2bf9f54bf29f4f51c9bbd\transformed\jetified-window-1.0.0-beta04\res
 com.example.foodrecipe.app-debug-4 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\android\app\src\debug\res
 com.example.foodrecipe.app-main-5 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\android\app\src\main\res
 com.example.foodrecipe.app-pngs-6 C:\Users\junok\OneDrive\Desktop\Group22-FA23\RecipeApp\build\app\generated\res\pngs\debug
