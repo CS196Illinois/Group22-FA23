@@ -12,9 +12,32 @@ class IngredientTile extends StatelessWidget {
     required this.ingredientName,
     required this.deleteFunction,
   });
+  
 
   @override
   Widget build(BuildContext context) {
+    String ingredientNameCorrectCapitalization = "";
+    List ingredientNameSplit = ingredientName.split(" ");
+    if (ingredientName.length > 1) {
+      for (int i = 0; i < ingredientNameSplit.length; i++) {
+        if (i > 0) {
+          if (ingredientNameSplit[i].isNotEmpty) {
+            ingredientNameCorrectCapitalization = ingredientNameCorrectCapitalization 
+            + " " + ingredientNameSplit[i].substring(0, 1).toUpperCase() + ingredientNameSplit[i].substring(1);
+          }
+        } else {
+          if (ingredientNameSplit[i].isNotEmpty) {
+            ingredientNameCorrectCapitalization = ingredientNameCorrectCapitalization 
+              + ingredientNameSplit[i].substring(0, 1).toUpperCase() + ingredientNameSplit[i].substring(1);
+          }
+        }
+        
+      }
+    } else if (ingredientName.length == 1) {
+      ingredientNameCorrectCapitalization = ingredientName.toUpperCase();
+    } else {
+      ingredientNameCorrectCapitalization = "";
+    }
     return Padding(
       padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
       //allows tile to be slidable, allows for delete button to remove ingredient from the list
@@ -36,7 +59,7 @@ class IngredientTile extends StatelessWidget {
           alignment: Alignment.center,
   
           child: Text(
-            ingredientName,
+            ingredientNameCorrectCapitalization,
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,

@@ -73,7 +73,11 @@ class _BookmarkState extends State<Bookmark> {
   //_controller.text is reset so the text input box is empty
   void saveIngredient() {
     setState(() {
-      database.ingredientList.add(_controller.text);
+      if (_controller.text.isNotEmpty) {
+        if (_controller.text.trim().isNotEmpty) {
+          database.ingredientList.add(_controller.text.toLowerCase());
+        }
+      }
       _controller.text = "";
       if (database.ingredientList[0] == "Add An Ingredient!") {
         deleteIngredient(0);
