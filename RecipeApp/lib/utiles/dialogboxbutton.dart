@@ -12,6 +12,6 @@ class DialogBoxButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-        onPressed: onPressed, color: Colors.white, child: Text(text));
+        onPressed: onPressed, color: Colors.grey, child: Text(text));
   }
 }
