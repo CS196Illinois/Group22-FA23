@@ -39,7 +39,7 @@ class IngredientTile extends StatelessWidget {
       ingredientNameCorrectCapitalization = "";
     }
     return Padding(
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 40),
+      padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
       //allows tile to be slidable, allows for delete button to remove ingredient from the list
       child: Slidable(
         endActionPane: ActionPane(

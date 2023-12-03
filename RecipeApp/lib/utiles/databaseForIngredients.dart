@@ -19,5 +19,6 @@ class IngredientDataBase {
   //update database
   void updateDataBase() {
     _box.put("INGREDIENTLIST", ingredientList);
+    ingredientList.sort();
   }
 }
