@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodrecipe/color.dart';
+import 'package:foodrecipe/utiles/customsearchdelegate.dart';
 import 'package:foodrecipe/utiles/databaseForIngredients.dart';
 import 'package:foodrecipe/utiles/dialogbox.dart';
 import 'package:foodrecipe/utiles/ingredienttile.dart';
@@ -94,6 +95,11 @@ class _BookmarkState extends State<Bookmark> {
       child: Scaffold(
           appBar: AppBar(
             backgroundColor: primary,
+            actions: [
+              IconButton(onPressed: () {
+                showSearch(context: context, delegate: CustomSearchDelegate(database.ingredientList));
+              }, icon: Icon(Icons.search))
+            ],
             bottom: TabBar(tabs: [
               Tab(child: Text("Ingredients Available")),
             ]),
